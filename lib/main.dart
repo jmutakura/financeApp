@@ -24,6 +24,18 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home"),
       ),
+      body: ListView.builder(
+        itemCount: 20,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            leading: Icon(Icons.list),
+            trailing: Text(
+              "GFG",
+            ),
+            title: Text("List Item $index"),
+          );
+        },
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

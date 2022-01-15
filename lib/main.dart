@@ -24,17 +24,62 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home"),
       ),
-      body: ListView.builder(
-        itemCount: 20,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            leading: Icon(Icons.list),
-            trailing: Text(
-              "GFG",
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              addAutomaticKeepAlives: false,
+              // mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  decoration: BoxDecoration(color: Color(0xFF00FF00)),
+                  child: Text('BOX_1 Row'),
+                ),
+                Container(
+                  decoration: BoxDecoration(color: Color(0xFF00FF00)),
+                  child: Text('BOX_1 Row'),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(30),
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(color: Colors.grey),
+                  child: Text('BOX_1 Row'),
+                ),
+                Container(
+                  decoration: BoxDecoration(color: Color(0xFF00FF00)),
+                  child: Text('BOX_1 Row'),
+                ),
+                Container(
+                  decoration: BoxDecoration(color: Color(0xFF00FF00)),
+                  child: Text('BOX_1 Row'),
+                ),
+                Container(
+                  decoration: BoxDecoration(color: Color(0xFF00FF00)),
+                  child: Text('BOX_1 Row'),
+                ),
+                Container(
+                  decoration: BoxDecoration(color: Color(0xFF00FF00)),
+                  child: Text('BOX_1 Row'),
+                ),
+                Container(
+                  decoration: BoxDecoration(color: Color(0xFF00FF00)),
+                  child: Text('BOX_1 Row'),
+                ),
+              ],
             ),
-            title: Text("List Item $index"),
-          );
-        },
+          ),
+          Container(
+            decoration: BoxDecoration(color: Color(0xFF00FF00)),
+            child: Text('BOX_2'),
+          ),
+          Container(
+            decoration: BoxDecoration(color: Color(0xFF00FF00)),
+            child: Text('BOX_3'),
+          )
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
